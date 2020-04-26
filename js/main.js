@@ -26,10 +26,19 @@ let gap = 90;
 // Click btn
 
 document.addEventListener('keydown', moveUp);
+document.addEventListener('keydown', moveDown);
 
-function moveUp(){
-   yPos -= 25;
-   fly.play();
+function moveUp(event){
+   if (event.keyCode === 38){
+      yPos -= 25;
+      fly.play();
+   }
+}
+
+function moveDown(event) {
+   if (event.keyCode === 40){
+      yPos += 15;
+   }
 }
 
 // Blocks
